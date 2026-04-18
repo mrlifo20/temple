@@ -1,106 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Frontend Developer Portfolio - High-quality web solutions.">
-    <title>Alex Rivera | Professional Frontend Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter', sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0b1220;
+      color:#e5e7eb;
+    }
+
+    /* NAV */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 10%;
+      position:sticky;
+      top:0;
+      background:rgba(11,18,32,0.8);
+      backdrop-filter:blur(10px);
+    }
+
+    nav h1{
+      font-size:20px;
+      font-weight:700;
+      color:#38bdf8;
+    }
+
+    nav a{
+      color:#e5e7eb;
+      margin-left:20px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO */
+    .hero{
+      height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:0 10%;
+    }
+
+    .hero h2{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    .hero span{
+      color:#38bdf8;
+    }
+
+    .hero p{
+      max-width:600px;
+      margin-top:10px;
+      color:#9ca3af;
+    }
+
+    .btn{
+      margin-top:20px;
+      padding:12px 25px;
+      background:#38bdf8;
+      color:#0b1220;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    /* SECTIONS */
+    section{
+      padding:80px 10%;
+    }
+
+    h3{
+      font-size:28px;
+      margin-bottom:30px;
+      color:#38bdf8;
+    }
+
+    /* SERVICES */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#111827;
+      padding:25px;
+      border-radius:12px;
+      transition:0.3s;
+      border:1px solid #1f2937;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#38bdf8;
+    }
+
+    /* ABOUT */
+    .about p{
+      color:#9ca3af;
+      max-width:700px;
+      line-height:1.7;
+    }
+
+    /* CONTACT */
+    form{
+      display:flex;
+      flex-direction:column;
+      max-width:500px;
+      gap:15px;
+    }
+
+    input,textarea{
+      padding:12px;
+      border-radius:8px;
+      border:none;
+      outline:none;
+    }
+
+    textarea{
+      min-height:120px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#6b7280;
+      border-top:1px solid #1f2937;
+    }
+
+    @media(max-width:600px){
+      .hero h2{
+        font-size:32px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">AR<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="btn-secondary">Get in Touch</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- NAV -->
+  <nav>
+    <h1>MO ADEL</h1>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Alex Rivera</h1>
-                    <p class="title">Frontend Developer & UI Architect</p>
-                    <p class="tagline">Building high-performance, accessible, and scalable web experiences for modern enterprises.</p>
-                    <div class="hero-btns">
-                        <a href="#contact" class="btn-primary">Work With Me</a>
-                        <a href="#services" class="btn-outline">View Services</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Hi, I'm Mohamed Adel<span>Frontend Developer</span></h2>
+    <p>I build fast, modern and responsive websites with clean code and professional design focused on performance and user experience.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
+  </div>
 
-        <section id="services" class="services section-padding">
-            <div class="container">
-                <h2 class="section-title">Core Expertise</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="icon">💻</div>
-                        <h3>Web Development</h3>
-                        <p>Clean, semantic HTML and modern CSS architecture ensuring fast load times and SEO optimization.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon">📱</div>
-                        <h3>Responsive Design</h3>
-                        <p>Mobile-first approach that ensures your brand looks prestigious on desktops, tablets, and smartphones.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon">⚡</div>
-                        <h3>Performance Audit</h3>
-                        <p>Optimizing existing codebases to achieve 90+ Lighthouse scores and superior user retention.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- SERVICES -->
+  <section id="services">
+    <h3>Services</h3>
+    <div class="grid">
+      <div class="card">Responsive Website Development</div>
+      <div class="card">Landing Pages Design</div>
+      <div class="card">UI/UX Implementation</div>
+    </div>
+  </section>
 
-        <section id="about" class="about section-padding">
-            <div class="container">
-                <div class="about-flex">
-                    <div class="about-text">
-                        <h2 class="section-title">About Me</h2>
-                        <p>With over 6 years of experience, I bridge the gap between complex engineering and intuitive user interface design. I specialize in turning business requirements into technical reality without compromising on aesthetics or performance.</p>
-                        <p>I believe that every pixel should serve a purpose and every line of code should be maintainable.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h3>About Me</h3>
+    <p>
+      I am a passionate web developer focused on creating modern, responsive and user-friendly websites. 
+      I pay attention to performance, clean code structure and professional UI design.
+    </p>
+  </section>
 
-        <section id="contact" class="contact section-padding">
-            <div class="container">
-                <div class="contact-card">
-                    <h2 class="section-title">Start a Conversation</h2>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Work Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary full-width">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h3>Contact</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Alex Rivera. All rights reserved. Professionalism in every pixel.</p>
-        </div>
-    </footer>
+  <footer>
+    © 2026 MO ADEL. All rights reserved.
+  </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
