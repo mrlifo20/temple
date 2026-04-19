@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MO ADEL Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+body{
+  background:#000;
+  color:#e5e7eb;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  position:sticky;
+  top:0;
+  background:#000;
+  border-bottom:1px solid #111;
+}
+
+nav h1{
+  color:#00c8ff;
+}
+
+nav a{
+  color:#aaa;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+nav a:hover{
+  color:#00c8ff;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 10%;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  max-width:500px;
+}
+
+.hero h2{
+  font-size:40px;
+}
+
+.hero span{
+  color:#00c8ff;
+}
+
+.hero p{
+  margin-top:15px;
+  color:#aaa;
+}
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  background:#00c8ff;
+  color:#000;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.btn:hover{
+  opacity:0.8;
+}
+
+.hero img{
+  width:300px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,200,255,0.2);
+}
+
+/* SECTIONS */
+section{
+  padding:70px 10%;
+}
+
+h3{
+  margin-bottom:30px;
+  color:#00c8ff;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#0a0a0a;
+  padding:25px;
+  border-radius:15px;
+  border:1px solid #111;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#00c8ff;
+}
+
+/* ABOUT */
+.about p{
+  color:#aaa;
+  line-height:1.7;
+}
+
+/* CONTACT */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:400px;
+}
+
+input,textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #222;
+  background:#0a0a0a;
+  color:#fff;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#555;
+  border-top:1px solid #111;
+}
+
+@media(max-width:800px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero img{
+    margin-top:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>MO ADEL</h1>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <h2>Hi, I'm Mohamed Adel <br><span>Frontend Developer</span></h2>
+    <p>I build modern, fast and responsive websites with clean code and professional UI.</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
+  </div>
+
+  <!-- 🔥 الصورة -->
+  <img src="photo.jpg" alt="Profile Image">
+</div>
+
+<section id="services">
+  <h3>Services</h3>
+  <div class="grid">
+    <div class="card">Responsive Websites</div>
+    <div class="card">Landing Pages</div>
+    <div class="card">UI Implementation</div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h3>About Me</h3>
+  <p>
+    I am a frontend developer focused on building clean, modern, and high-performance websites.
+    I care about user experience, speed, and writing maintainable code.
+  </p>
+</section>
+
+<section id="contact">
+  <h3>Contact</h3>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 MO ADEL
+</footer>
+
+</body>
+</html>
